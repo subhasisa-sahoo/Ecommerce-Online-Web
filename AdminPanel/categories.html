@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <title>Product Cards with Sliding Hover Effects</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      display: flex;
+      justify-content: space-around;
+    }
+    
+    .card {
+      height: 350pxpx;
+      width: 300px;
+      background-color: beige;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.5s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 20px gray;
+    }
+    
+    .card-img {
+      background: #fff;
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+      padding: 10px 10px 10px 10px;
+    }
+    
+    .card-content {
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .card-description {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 15px;
+    }
+    
+    .card-details {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    .card-details p{
+        font-size: 20px;
+    }
+
+    .card-details button ,
+    .card-details button a{
+        height: 40px;
+        border-radius: 30px;
+        font-size: 15px;
+        background: #3489db;
+        color: white;
+        transition: transform 0.2s ease-in-out;
+
+    }
+
+    .card-details button a{
+      text-decoration: none;
+      font-size: 20px;
+      color: white;
+    }
+
+    .card-details button:hover{
+      box-shadow: 0 0 15px white;
+      transform: scale(1.1);
+    }
+    
+    .card:hover .card-details {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+    <h1><center>CATEGORIES</center></h1>
+  <div class="container">
+    <div class="card">
+      <img class="card-img" src="images/clothes-hanger.png" alt="Product 1">
+      <div class="card-content">
+        <h2 class="card-title">CLOTHING</h2>
+        <p class="card-description">Indian drapes</p>
+        <div class="card-details">
+            <p>Explore products</p>
+          <button><a href="reg_product.php?cat=Cloths">CLICK HERE</a></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="card-img" src="images/shelf.png" alt="Product 2">
+      <div class="card-content">
+        <h2 class="card-title">HOME DECOR</h2>
+        <p class="card-description">Transforming Spaces, Inspiring Lives.</p>
+        <div class="card-details">
+          <p>Explore products</p>
+          <button><a href="reg_product.php?cat=Home decor">CLICK HERE</a></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="card-img" src="images/jewelry.png" alt="Product 3">
+      <div class="card-content">
+        <h2 class="card-title">ARTISANAL CRAFTS</h2>
+        <p class="card-description">Crafted with Care & Love</p>
+        <div class="card-details">
+            <p>Explore products</p>
+            <button><a href="reg_product.php?cat=art-crafts">CLICK HERE</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <img class="card-img" src="images/skincare.png" alt="Product 1">
+      <div class="card-content">
+        <h2 class="card-title">NATURAL SKINCARE</h2>
+        <p class="card-description">Inspired By Nature</p>
+        <div class="card-details">
+            <p>Explore products</p>
+          <button><a href="reg_product.php?cat=Skincare">CLICK HERE</a></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="card-img" src="images/wall.png" alt="Product 2">
+      <div class="card-content">
+        <h2 class="card-title">ART GALLERY</h2>
+        <p class="card-description">Artisanal Treasures for Every Home.</p>
+        <div class="card-details">
+            <p>Explore products</p>
+          <button><a href="reg_product.php?cat=art-gallery">CLICK HERE</a></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="card-img" src="images/kitchenware.png" alt="Product 3">
+      <div class="card-content">
+        <h2 class="card-title">KITCHENWARE</h2>
+        <p class="card-description">Bringing Nature to Your Kitchen</p>
+        <div class="card-details">
+            <p>Explore products</p>
+          <button><a href="reg_product.php?cat=kitchenware">CLICK HERE</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

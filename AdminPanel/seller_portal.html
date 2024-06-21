@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Login</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/login_slider.css">
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/906/906343.png" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <!-- Sweet alert JS-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Ajax query -->
+    <script src="JS/ajaxquery.js"></script>
+</head>
+
+<body>
+    <div class="web_logo">
+        <!-- <img src="../IMG/logo_new.jpg" alt="" srcset=""> -->
+        <img src="logo_new-removebg.png" alt="" srcset="">   
+    </div>
+    <div class="hero">
+        <img src="seller.png" alt="" srcset="">
+        <div>
+            <div>
+                <p class="hero_header">Become a Seller<br>Sell Your Product to your target Customer</p>
+                <p class="hero-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores quasi totam nihil ipsum assumenda odio dicta. Ab quas repudiandae deleniti cupiditate, fuga debitis assumenda optio error mollitia neque consequatur facilis!</p>
+            </div>
+            <div style="display: flex;">
+                <button id="login_btn">Login</button>
+                <button id="register-btn"><a href="register.php">Register</a></button>
+            </div>
+        </div>
+    </div>
+        <!-- LOGIN FORM -->
+    <div id="backdrop" class="backdrop"></div>
+    <section class="slider">
+    <form class="login_slider" action="login.php" id="formContainer" method="POST">
+      <div class="btn_closer" id="closebar">&times;</div>
+      <div class="log2_slider">
+        <h1>Seller Log In</h1>
+        <p>Please enter your details</p>
+        <div class="square_img">
+          <img src="https://thumbs.dreamstime.com/b/authorized-seller-icon-verified-dealer-authorized-seller-icon-style-golden-medal-check-mark-verified-dealer-239700231.jpg" alt="">
+        </div>
+        <div class="input_space">
+          <input type="email" name="email" id="email" placeholder="Enter email here" required><br>
+        </div>
+        <input type="password" name="password" id="user_pwd" placeholder="Enter Your password" required>
+        <input type="submit" value="Login" name="submit">
+        
+      </div>
+    </form>
+  </section>
+
+  <script>
+    const login_btn = document.getElementById("login_btn");
+    const formContainer = document.getElementById("formContainer");
+    const closebar = document.getElementById("closebar");
+    const backdrop = document.getElementById("backdrop");
+    login_btn.addEventListener("click", function() {
+        formContainer.classList.toggle("show-form");
+        backdrop.classList.toggle("show-backdrop");
+    });
+    closebar.addEventListener("click", function() {
+        formContainer.classList.remove("show-form");
+        backdrop.classList.remove("show-backdrop");
+    });
+  </script>
+  <script src="JS/register.js"></script>
+</body>
+</html>

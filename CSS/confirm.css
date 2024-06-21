@@ -1,0 +1,29 @@
+.head {
+    height: 150px;
+    width: auto;
+    background-color: #f7f310;
+    display: flex;
+}
+
+.header-sec-msg {
+    margin: 50px 0 0 25%;
+}
+
+.order-box {
+    background-color: var(--formbg);
+    display: flex;
+    height: 100px;
+    width: 48%;
+    padding: 10px;
+    background-color: #f6f8fb;
+    border-radius: 4px;
+    text-align: center;
+}
+
+
+.order-box div {
+    border-right: 1px solid;
+    border-right-color:#e5e7e2 ;
+    padding: 10px 40px 0 1px;
+    margin-left: 20px;
+}

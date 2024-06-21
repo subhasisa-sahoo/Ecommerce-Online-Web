@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Product Details Form</title>
+    <style>
+        /* Add some basic styling for better presentation */
+        .container {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-image: linear-gradient(to left, rgb(255, 255, 128), rgb(255, 150, 80));
+            border-radius: 30px;
+            color: black;
+       }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .heading{
+            text-align: center;
+        }
+        .submit{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .success-message{
+            color: black;
+            font-size: 20px;
+        }
+
+        #quantity,#category{
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>ENTER PRODUCT DETAILS</h1>
+        </div>
+        <form action="#" method="" id="myForm">
+            <label for="product_name">Product Name:</label>
+            <input type="text" id="product_name" name="product_name" required>
+    
+            <!-- <label for="seller_name">Seller Name:</label>
+            <input type="text hidden" id="seller_name" name="seller_name" required> -->
+            
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+    
+            <label for="price">Price:</label>
+            <input type="text" id="price" name="price" required>
+    
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10" required>
+    
+            <label for="category">Category:</label>
+            <!-- <input type="text" id="category" name="category"> -->
+            <select id="category" name="category">
+                <option value="option1">Clothing</option>
+                <option value="option2">Home Decor</option>
+                <option value="option2">Artisanal Crafts</option>
+                <option value="option3">natural Skincare</option>
+                <option value="option4">Art Gallery</option>
+                <option value="option4">Kitchenware</option>
+              </select>
+
+            <label for="image">Upload Image:</label>
+            <input type="file" id="image" name="image" accept="image/*">
+            <br>
+            <br>
+    
+            <DIV class="submit">
+                <input type="submit" value="Submit">
+                <div id="successMessage" class="success-message" style="display: none;">Form submitted successfully!</div>
+            </DIV>
+        </form>
+    </div>
+    
+
+  <script>
+    
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+      
+
+      // Clear form inputs
+
+      function resetForm() {
+        document.getElementById('myForm').reset();
+      }
+      resetForm();
+
+      // Display success message
+      document.getElementById('successMessage').style.display = 'block';
+
+      // Hide success message after 3 seconds
+      setTimeout(function() {
+        document.getElementById('successMessage').style.display = 'none';
+      }, 3000);
+      Swal.fire({
+        icon: "success",
+        title: "Your product has been saved",
+        showConfirmButton: false,
+        timer: 1800
+      });
+    });
+  </script>
+</body>
+</html>

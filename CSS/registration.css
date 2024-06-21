@@ -1,0 +1,197 @@
+/* EMAIL_VERIFY PAGE */
+.email_verify .square_img img{
+    height: 200px;
+    width: 200px;
+    margin: 20px 0;
+}
+/* OTP_VERIFY PAGE */
+.otp_verify .square_img img{
+    height: 160px;
+    width: 160px;
+    margin: 20px 0;
+}
+.otp_verify input[type="number"]::-webkit-inner-spin-button{
+    display: none;
+}
+/* CRAETE PWD PAGE */
+.create_pwd .log1 img{
+    width: 130%;
+    margin-left: -20%;
+}
+.create_pwd .square_img img{
+    height: 180px;
+    width: 250px;
+    margin: 10px 0;
+}
+.pwd_validation {
+    display: none;
+    margin-left: 24%;
+    text-align: left;
+}
+.pwd_match{
+    display: none;
+}
+.pwd_validation ul,
+.pwd_match ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.pwd_validation ul li,
+.pwd_match ul li {
+    color: red;
+    margin-bottom: 2px;
+}
+
+.pwd_validation ul li::before{
+    content: "✘";
+    margin-right: 5px;
+}
+
+.pwd_validation ul li.active {
+    color: #007bff;
+}
+
+.pwd_validation ul li.active::before {
+    content: "✔";
+    color: #007bff;
+}
+/* PROFILE PAGE */
+/* ADDRESS PAGE */
+.reg_profile,
+.reg_adrs{
+    background: var(--bg-sky);
+    height: auto;
+}
+.reg_adrs{
+    padding: 5% 0;
+}
+.reg_profile form,
+.reg_adrs form{
+    width: 40%;
+    height: auto;
+    /* box-shadow: var(--shadow); */
+    box-shadow: rgb(200,208,231) 3.2px 3.2px 8px 0px, rgb(255, 255, 255) -3.2px -3.2px 8px 0px inset;
+    /* background-color: #fbfbff; */
+    border-radius: 8px;
+    margin: 0px auto;
+    padding: 20px 10px;
+    background-color: #fff;
+}
+.under_heading{
+    font-size: 12px;
+    text-align: center;
+}
+.reg_profile .profile_img{
+    width: 120px;
+    margin: 10px auto;
+}
+.profile_img img{
+    object-fit: cover;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+}
+.reg_adrs .profile_img img{
+    border-radius: 0;
+}
+.reg_profile .profile_details{
+    display: flex;
+    flex-wrap: wrap;
+}
+.reg_profile input,
+.reg_adrs input{
+    margin: 10px 28px;
+}
+.reg_profile label{
+    display: block;
+    background-color: var(--dark);
+    color: var(--primary);
+    height: auto;
+    width: 150px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 20px auto;
+}
+.reg_profile input[type="file"]{
+    display: none; 
+}
+.reg_profile input[type="text"],
+.reg_profile input[type="submit"]{
+    width: 40%;
+    margin: 10px auto;
+}
+.reg_profile input[type="email"],
+.reg_profile input[type="tel"],
+.reg_profile input[type="submit"]{
+    font-size: var(--font-size17);
+    width: 90%;
+}
+.reg_adrs input[type="submit"]{
+    margin-left: 5%;
+}
+.reg_profile input[type="email"]{
+    background-color: var(--tertiary);   
+}
+.reg_profile input[type="email"]:focus{
+    outline: none;
+}
+.adrs_details .text input[type="text"],
+.reg_adrs input[type="number"]{
+    width: 90%;
+}
+.reg_adrs input[type="text"]{
+    width: 42.5%;
+}
+/* BOOTSTRAP MAIL */
+.alert-success{
+    width: 40%;
+    margin: 36px auto;
+}
+.alert-success img{
+    margin-top: -3px;
+    margin-right: 5px;
+}
+
+select{
+    width: 42%;
+    height: 38px;
+    margin-left: 5%;
+    border-radius: 6px;
+    font-size: 17px;
+}
+.reg_adrs .under_heading{
+    margin-bottom: 30px;
+}
+.reg_adrs input[type="submit"]{
+    width: 50%;
+    font-size: var(--font-size17);
+}
+.reg_adrs .submit-btn{
+    display: flex;
+    justify-content: space-between;
+}
+.reg_adrs .submit-btn .skip-btn{
+    background-color: var(--primary);
+    color: var(--dark);
+}
+
+
+
+
+/* df otp vf
+input[type="number"]{
+    width: 50px;
+    border-radius: 5px;
+    text-align: center;
+}
+input[type="number"]::-webkit-inner-spin-button{
+    display: none;
+}
+.otp_num{
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+} */

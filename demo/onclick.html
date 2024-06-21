@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="myfun()">Click me</button>
+    <p id="demo-btn"></p>
+    <li onclick="lifun()">Click li</li>
+    <p id="demo-li"></p>
+    <script>
+        function myfun(){
+            document.getElementById('demo-btn').innerHTML="Hello,click on button";
+        }
+        function lifun(){
+            document.getElementById('demo-li').innerHTML="Hii, clicked on Li onclick";
+        }
+    </script>
+</body>
+</html>
